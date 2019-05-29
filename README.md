@@ -28,5 +28,6 @@ SPOTIFY_CLIENT_SECRET=*your_client_secret_here*
 
 # Endpoints
 
-`GET /songs?search={songName}`: Search for songs with song name.
-`GET /artists?search={artistName}`: Search for artists with name.
+    `GET /songs?search={songName}`: Search for songs with song name.
+
+    `GET /artists?search={artistName}`: Search for artists with name.
