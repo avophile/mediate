@@ -12,14 +12,31 @@ let token = "";
 app.get("/", (req, res) => res.send({ message: "The server is ready" }));
 
 //End point for searching
-app.get("/search", (req, res) => {
-  if (req.query["song"]) {
+app.get("/songs", (req, res) => {
+  if (req.query["search"]) {
     axios({
       method: "get",
       url: "https://api.spotify.com/v1/search",
       params: {
-        q: req.query["song"],
+        q: req.query["search"],
         type: "track"
+      },
+      headers: {
+        Authorization: "Bearer " + token
+      },
+      json: true
+    }).then(response => res.send(response.data));
+  }
+});
+
+app.get("/artists", (req, res) => {
+  if (req.query["search"]) {
+    axios({
+      method: "get",
+      url: "https://api.spotify.com/v1/search",
+      params: {
+        q: req.query["search"],
+        type: "artist"
       },
       headers: {
         Authorization: "Bearer " + token
