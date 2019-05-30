@@ -32,4 +32,4 @@ SPOTIFY_CLIENT_SECRET=*your_client_secret_here*
 
     `GET /artists?search={artistName}`: Search for artists with name.
 
-# HEROKU WAS A PAIN (ALL BECAUSE OF DOUG!)
+# HEROKU WAS A PAIN (ALL BECAUSE OF DOUG.)
