@@ -45,6 +45,12 @@ app.get("/artists", (req, res) => {
     }).then(response => res.send(response.data));
   }
 });
+
+function sum(a, b) {
+    return a + b;
+  }
+  module.exports = sum;
+
 // Important: port must be read from the environment for Heroku
 const port = process.env.PORT || 3000;
 
