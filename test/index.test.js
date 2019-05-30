@@ -8,10 +8,10 @@ beforeEach(
     })
 );
 
-test("A must Equal A", async () => {
-  const a = await onLoad();
-  console.log(a);
-  expect(a==a);
+const sum = require('./sum');
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
 });
 
 /*
