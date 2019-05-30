@@ -7,6 +7,13 @@ beforeEach(
       whitelist: ["accounts.spotify.com"]
     })
 );
+
+test("A must Equal A", async () => {
+  const a = await onLoad();
+  console.log(a);
+  expect(a==a);
+});
+
 /*
 test("Token must be defined", async () => {
   const token = await onLoad();
